@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW Clone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        header .logo img {
+            height: 40px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .hero {
+            background: url('https://www.bmwusa.com/content/dam/bmwusa/bmw-models/2021/3-series-sedan/bmw-3series-mystique-myrtle-bay.jpg') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+        }
+
+        .content {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .content h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .models-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .model {
+            width: 30%;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .model img {
+            width: 100%;
+        }
+
+        .model h3 {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+
+        .model p {
+            font-size: 1em;
+            padding: 0 10px 10px;
+        }
+
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #444;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://www.bmwusa.com/etc/designs/bmwusa/bmw-icons/bmw-logo.svg" alt="BMW Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#models">Models</a></li>
+                <li><a href="#offers">Offers</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="home" class="hero">
+            <h1>Welcome to BMW</h1>
+            <p>Experience the Ultimate Driving Machine</p>
+        </section>
+        
+        <section id="models" class="content">
+            <h2>Our Models</h2>
+            <div class="models-grid">
+                <div class="model">
+                    <img src="https://www.bmwusa.com/content/dam/bmw/common/all-models/my23/3-series/sedan/bmw-my23-3series-sedan-sp-desktop.jpg" alt="BMW 3 Series">
+                    <h3>BMW 3 Series</h3>
+                    <p>The iconic sports sedan</p>
+                </div>
+                <div class="model">
+                    <img src="https://www.bmwusa.com/content/dam/bmw/common/all-models/my23/5-series/sedan/bmw-my23-5series-sedan-sp-desktop.jpg" alt="BMW 5 Series">
+                    <h3>BMW 5 Series</h3>
+                    <p>Luxury and performance</p>
+                </div>
+                <div class="model">
+                    <img src="https://www.bmwusa.com/content/dam/bmw/common/all-models/my23/7-series/sedan/bmw-my23-7series-sedan-sp-desktop.jpg" alt="BMW 7 Series">
+                    <h3>BMW 7 Series</h3>
+                    <p>Exquisite luxury and innovative technology</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="offers" class="content">
+            <h2>Current Offers</h2>
+            <p>Check out our latest offers on new BMW models.</p>
+            <!-- Offer details can be added here -->
+        </section>
+        
+        <section id="contact" class="content">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 BMW. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Form submitted! We will get back to you soon.');
+        });
+    </script>
+</body>
+</html>
